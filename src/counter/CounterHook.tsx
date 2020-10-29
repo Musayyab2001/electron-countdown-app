@@ -49,10 +49,9 @@ const CounterHook = (props: CounterProps) => {
 
       if (duration.asSeconds() <= 60) {
         setTimerColor("orange");
-      } else if (duration.asSeconds() <= 10) {
+      }
+      if (duration.asSeconds() <= 10) {
         setTimerColor("red");
-      } else {
-        setTimerColor("black");
       }
 
       if (duration.asSeconds() === 0) {
@@ -81,28 +80,28 @@ const CounterHook = (props: CounterProps) => {
         {days !== 0 && (
           <div className="countdown-item">
             {days}
-            <span>days</span>
+            <span>Tage</span>
           </div>
         )}
 
         {hours !== 0 && (
           <div className="countdown-item">
             {hours}
-            <span>hours</span>
+            <span>Stunden</span>
           </div>
         )}
 
         {minutes !== 0 && (
           <div className="countdown-item">
             {minutes}
-            <span>minutes</span>
+            <span>Minuten</span>
           </div>
         )}
 
         {seconds !== 0 && (
           <div className="countdown-item" style={timerInputStyle}>
             {seconds}
-            <span>seconds</span>
+            <span>Sekunden</span>
           </div>
         )}
       </div>
